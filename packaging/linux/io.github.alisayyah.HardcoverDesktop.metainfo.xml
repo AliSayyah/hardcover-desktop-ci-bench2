@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.alisayyah.HardcoverDesktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MIT</project_license>
+  <name>Hardcover Desktop</name>
+  <summary>Track your reading on Hardcover</summary>
+  <developer id="io.github.alisayyah">
+    <name>Ali Sayyah</name>
+  </developer>
+  <description>
+    <p>
+      An unofficial desktop client for Hardcover, the social reading tracker.
+      Browse your library by shelf, search for books and add them, rate them,
+      and log your reading progress and dates.
+    </p>
+    <p>Your library and covers are cached, so they open instantly and stay readable offline.</p>
+  </description>
+  <launchable type="desktop-id">io.github.alisayyah.HardcoverDesktop.desktop</launchable>
+  <url type="homepage">https://github.com/AliSayyah/hardcover-desktop</url>
+  <url type="bugtracker">https://github.com/AliSayyah/hardcover-desktop/issues</url>
+  <url type="vcs-browser">https://github.com/AliSayyah/hardcover-desktop</url>
+  <provides>
+    <binary>hardcover-desktop</binary>
+  </provides>
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+  </supports>
+  <content_rating type="oars-1.1"/>
+  <releases>
+    <release version="0.1.0" date="2026-11-19"/>
+  </releases>
+</component>

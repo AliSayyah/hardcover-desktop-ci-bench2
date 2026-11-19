@@ -1,0 +1,112 @@
+name: Set up the Rust build
+description: >
+  Installs the system build dependencies and the toolchain pinned in
+  rust-toolchain.toml, and restores the cargo cache. Runs on Ubuntu 22.04 or
+  newer, as root (container jobs) or with sudo.
+inputs:
+  cache-key:
+    description: Extra key that separates this job's cache from others.
+    required: false
+    default: ""
+runs:
+  using: composite
+  steps:
+    # apt downloads about 90 MB of packages per job, and the Ubuntu mirrors
+    # now and then serve them, or the package lists, at a few hundred kB/s:
+    # one job took 11 min. The lists and packages are kept in the Actions cache
+    # instead. The key changes each month, so a month's first master run
+    # refreshes them; until then jobs install from the cache without
+    # `apt-get update`.
+    - name: Prepare the package cache
+      id: apt
+      shell: bash
+      run: |
+        sudo=
+        if [[ $(id -u) != 0 ]]; then sudo=sudo; fi
+        # Docker's ubuntu image deletes downloaded packages after each install.
+        $sudo rm -f /etc/apt/apt.conf.d/docker-clean
+        echo 'Binary::apt::APT::Keep-Downloaded-Packages "true";' |
+          $sudo tee /etc/apt/apt.conf.d/90keep-packages >/dev/null
+        . /etc/os-release
+        prefix="apt-$ID-$VERSION_ID-"
+        {
+          echo "dir=$RUNNER_TEMP/apt-cache"
+          echo "prefix=$prefix"
+          echo "key=$prefix$(date -u +%Y-%m)-${{ hashFiles('ci/install-build-deps.sh') }}"
+        } >>"$GITHUB_OUTPUT"
+
+    - uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+      id: apt-cache
+      with:
+        path: ${{ steps.apt.outputs.dir }}
+        key: ${{ steps.apt.outputs.key }}
+        restore-keys: ${{ steps.apt.outputs.prefix }}
+
+    - name: Install build dependencies
+      shell: bash
+      env:
+        CACHE: ${{ steps.apt.outputs.dir }}
+        # Only this month's lists are trusted; older ones get an update.
+        APT_LISTS_CACHED: ${{ steps.apt-cache.outputs.cache-hit == 'true' && '1' || '' }}
+      run: |
+        sudo=
+        if [[ $(id -u) != 0 ]]; then sudo=sudo; fi
+        if compgen -G "$CACHE/archives/*.deb" >/dev/null; then
+          $sudo cp "$CACHE"/archives/*.deb /var/cache/apt/archives/
+        fi
+        if [[ $APT_LISTS_CACHED == 1 ]]; then
+          $sudo cp "$CACHE"/lists/* /var/lib/apt/lists/
+        fi
+        ci/install-build-deps.sh
+        # zstd is installed after the package cache is saved; see below.
+        $sudo apt-get install -y -qq --download-only zstd
+        # Drop packages the archive has replaced, so the cache doesn't grow.
+        $sudo apt-get autoclean -qq
+        rm -rf "$CACHE"
+        mkdir -p "$CACHE/archives" "$CACHE/lists"
+        cp /var/cache/apt/archives/*.deb "$CACHE/archives/"
+        find /var/lib/apt/lists -maxdepth 1 -type f ! -name lock -exec cp -t "$CACHE/lists/" {} +
+
+    - if: >-
+        steps.apt-cache.outputs.cache-hit != 'true' &&
+        github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+      uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+      with:
+        path: ${{ steps.apt.outputs.dir }}
+        key: ${{ steps.apt.outputs.key }}
+
+    # With zstd present, the Actions cache compresses with it instead of gzip,
+    # which restores and saves the cargo cache several times faster. It comes
+    # after the package cache, which is restored before zstd is installed and
+    # so must stay gzip: a cache saved with zstd isn't found without it.
+    - name: Install zstd
+      shell: bash
+      run: |
+        sudo=
+        if [[ $(id -u) != 0 ]]; then sudo=sudo; fi
+        DEBIAN_FRONTEND=noninteractive $sudo apt-get install -y -qq --no-install-recommends zstd
+
+    - name: Install rustup
+      shell: bash
+      run: |
+        if ! command -v rustup >/dev/null; then
+          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs |
+            sh -s -- -y --profile minimal --default-toolchain none
+          echo "$HOME/.cargo/bin" >>"$GITHUB_PATH"
+        fi
+
+    - name: Install the pinned toolchain
+      shell: bash
+      run: |
+        export PATH="$HOME/.cargo/bin:$PATH"
+        rustup toolchain install
+        rustc --version
+
+    - uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0 # v2.9.3
+      with:
+        key: ${{ inputs.cache-key }}
+        # Every branch and pull request can restore the default branch's cache,
+        # but a cache saved elsewhere is visible only to its own ref. Saving
+        # only from the default branch keeps those from evicting the shared one
+        # under the repository's 10 GB cache limit.
+        save-if: ${{ github.ref == format('refs/heads/{0}', github.event.repository.default_branch) }}
