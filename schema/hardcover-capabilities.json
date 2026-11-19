@@ -1,0 +1,3528 @@
+{
+  "operations": [
+    {
+      "calls_internal": false,
+      "operation": "activities",
+      "tables": [
+        "activities"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "activities_by_pk",
+      "tables": [
+        "activities"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": true,
+      "operation": "add_to_default_filter_list",
+      "tables": [
+        "filter_lists"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": false,
+      "operation": "authors",
+      "tables": [
+        "authors"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "authors_by_pk",
+      "tables": [
+        "authors"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "book_categories",
+      "tables": [
+        "book_categories"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "book_categories_by_pk",
+      "tables": [
+        "book_categories"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "book_characters",
+      "tables": [
+        "book_characters"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "book_characters_by_pk",
+      "tables": [
+        "book_characters"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "book_collections",
+      "tables": [
+        "book_collections"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "book_collections_by_pk",
+      "tables": [
+        "book_collections"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": true,
+      "operation": "book_import_statuses",
+      "tables": [
+        "books"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": true,
+      "operation": "book_mapping_normalize",
+      "tables": [
+        "book_mappings"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": false,
+      "operation": "book_mappings",
+      "tables": [
+        "book_mappings"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "book_mappings_by_pk",
+      "tables": [
+        "book_mappings"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": true,
+      "operation": "book_normalize",
+      "tables": [
+        "books"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": false,
+      "operation": "book_series",
+      "tables": [
+        "book_series"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "book_series_aggregate",
+      "tables": [
+        "book_series"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "book_series_by_pk",
+      "tables": [
+        "book_series"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "book_statuses",
+      "tables": [
+        "book_statuses"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "book_statuses_by_pk",
+      "tables": [
+        "book_statuses"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "bookles",
+      "tables": [],
+      "type": null
+    },
+    {
+      "calls_internal": false,
+      "operation": "bookles_by_pk",
+      "tables": [],
+      "type": null
+    },
+    {
+      "calls_internal": false,
+      "operation": "books",
+      "tables": [
+        "books"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "books_aggregate",
+      "tables": [
+        "books"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "books_by_pk",
+      "tables": [
+        "books"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": true,
+      "operation": "books_trending",
+      "tables": [
+        "books"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "characters",
+      "tables": [
+        "characters"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "characters_by_pk",
+      "tables": [
+        "characters"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": true,
+      "operation": "collection_import_result_create_book",
+      "tables": [
+        "collection_import_results"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "collection_import_result_match",
+      "tables": [
+        "collection_import_results"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "collection_import_result_reimport",
+      "tables": [
+        "collection_import_results"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": false,
+      "operation": "collection_import_results",
+      "tables": [
+        "collection_import_results"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "collection_import_results_by_pk",
+      "tables": [
+        "collection_import_results"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": true,
+      "operation": "collection_import_retry",
+      "tables": [
+        "collection_imports"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": false,
+      "operation": "collection_imports",
+      "tables": [
+        "collection_imports"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "collection_imports_by_pk",
+      "tables": [
+        "collection_imports"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "contributions",
+      "tables": [
+        "contributions"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "contributions_aggregate",
+      "tables": [
+        "contributions"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "contributions_by_pk",
+      "tables": [
+        "contributions"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "contributor_role_categories",
+      "tables": [
+        "contributor_role_categories"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "contributor_role_categories_by_pk",
+      "tables": [
+        "contributor_role_categories"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "contributor_role_specializations",
+      "tables": [
+        "contributor_role_specializations"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "contributor_role_specializations_by_pk",
+      "tables": [
+        "contributor_role_specializations"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "contributor_roles",
+      "tables": [
+        "contributor_roles"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "contributor_roles_by_pk",
+      "tables": [
+        "contributor_roles"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "contributor_specializations",
+      "tables": [
+        "contributor_specializations"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "contributor_specializations_by_pk",
+      "tables": [
+        "contributor_specializations"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "countries",
+      "tables": [
+        "countries"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "countries_by_pk",
+      "tables": [
+        "countries"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "delete_activities",
+      "tables": [
+        "activities"
+      ],
+      "type": "delete"
+    },
+    {
+      "calls_internal": false,
+      "operation": "delete_activities_by_pk",
+      "tables": [
+        "activities"
+      ],
+      "type": "delete"
+    },
+    {
+      "calls_internal": true,
+      "operation": "delete_book_mapping",
+      "tables": [
+        "book_mappings"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "delete_filter_list",
+      "tables": [
+        "filter_lists"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "delete_filter_list_entity",
+      "tables": [
+        "filter_list_entities"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "delete_filter_list_subscription",
+      "tables": [
+        "filter_list_subscriptions"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "delete_follow",
+      "tables": [
+        "follows"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "delete_followed_list",
+      "tables": [
+        "lists"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "delete_followed_prompt",
+      "tables": [
+        "prompts"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "delete_followed_user",
+      "tables": [
+        "users"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": false,
+      "operation": "delete_followed_users",
+      "tables": [
+        "followed_users"
+      ],
+      "type": "delete"
+    },
+    {
+      "calls_internal": false,
+      "operation": "delete_followed_users_by_pk",
+      "tables": [
+        "followed_users"
+      ],
+      "type": "delete"
+    },
+    {
+      "calls_internal": true,
+      "operation": "delete_goal",
+      "tables": [
+        "goals"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "delete_like",
+      "tables": [
+        "likes"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "delete_list",
+      "tables": [
+        "lists"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "delete_list_book",
+      "tables": [
+        "list_books"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "delete_list_member",
+      "tables": [
+        "list_members"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "delete_prompt",
+      "tables": [
+        "prompts"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "delete_prompt_answer",
+      "tables": [
+        "prompt_answers"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "delete_reading_journal",
+      "tables": [
+        "reading_journals"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "delete_reading_journals_for_book",
+      "tables": [
+        "reading_journals"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": false,
+      "operation": "delete_user_blocks",
+      "tables": [
+        "user_blocks"
+      ],
+      "type": "delete"
+    },
+    {
+      "calls_internal": false,
+      "operation": "delete_user_blocks_by_pk",
+      "tables": [
+        "user_blocks"
+      ],
+      "type": "delete"
+    },
+    {
+      "calls_internal": true,
+      "operation": "delete_user_book",
+      "tables": [
+        "user_books"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "delete_user_book_read",
+      "tables": [
+        "user_book_reads"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "delete_vibe",
+      "tables": [
+        "vibes"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "edition_normalize",
+      "tables": [
+        "editions"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "edition_owned",
+      "tables": [
+        "list_books"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": false,
+      "operation": "editions",
+      "tables": [
+        "editions"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "editions_by_pk",
+      "tables": [
+        "editions"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": true,
+      "operation": "ensure_system_vibes",
+      "tables": [],
+      "type": "write"
+    },
+    {
+      "calls_internal": false,
+      "operation": "filter_list_entities",
+      "tables": [
+        "filter_list_entities"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "filter_list_entities_aggregate",
+      "tables": [
+        "filter_list_entities"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "filter_list_entities_by_pk",
+      "tables": [
+        "filter_list_entities"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "filter_list_subscriptions",
+      "tables": [
+        "filter_list_subscriptions"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "filter_list_subscriptions_aggregate",
+      "tables": [
+        "filter_list_subscriptions"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "filter_list_subscriptions_by_pk",
+      "tables": [
+        "filter_list_subscriptions"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "filter_lists",
+      "tables": [
+        "filter_lists"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "filter_lists_aggregate",
+      "tables": [
+        "filter_lists"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "filter_lists_by_pk",
+      "tables": [
+        "filter_lists"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "flag_statuses",
+      "tables": [
+        "flag_statuses"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "flag_statuses_by_pk",
+      "tables": [
+        "flag_statuses"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "followed_lists",
+      "tables": [
+        "followed_lists"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "followed_lists_by_pk",
+      "tables": [
+        "followed_lists"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "followed_prompts",
+      "tables": [
+        "followed_prompts"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "followed_prompts_by_pk",
+      "tables": [
+        "followed_prompts"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "followed_user_books",
+      "tables": [
+        "followed_user_books"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "followed_user_books_aggregate",
+      "tables": [
+        "followed_user_books"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "followed_users",
+      "tables": [
+        "followed_users"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "followed_users_by_pk",
+      "tables": [
+        "followed_users"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "following_user_books",
+      "tables": [
+        "following_user_books"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "following_user_books_aggregate",
+      "tables": [
+        "following_user_books"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "follows",
+      "tables": [
+        "follows"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "follows_aggregate",
+      "tables": [
+        "follows"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "follows_by_pk",
+      "tables": [
+        "follows"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "goals",
+      "tables": [
+        "goals"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "goals_by_pk",
+      "tables": [
+        "goals"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "images",
+      "tables": [
+        "images"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "images_by_pk",
+      "tables": [
+        "images"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": true,
+      "operation": "insert_author",
+      "tables": [
+        "authors"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "insert_block",
+      "tables": [
+        "users"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "insert_book",
+      "tables": [
+        "editions"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "insert_book_mapping",
+      "tables": [
+        "book_mappings"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "insert_character",
+      "tables": [
+        "characters"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "insert_collection_import",
+      "tables": [
+        "collection_imports"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "insert_edition",
+      "tables": [
+        "editions"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "insert_filter_list",
+      "tables": [
+        "filter_lists"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "insert_filter_list_entity",
+      "tables": [
+        "filter_list_entities"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "insert_follow",
+      "tables": [
+        "follows"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "insert_followed_user",
+      "tables": [
+        "users"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "insert_goal",
+      "tables": [
+        "goals"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "insert_image",
+      "tables": [
+        "images"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "insert_list",
+      "tables": [
+        "lists"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "insert_list_book",
+      "tables": [
+        "list_books"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "insert_list_member",
+      "tables": [
+        "list_members"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": false,
+      "operation": "insert_notification_settings",
+      "tables": [
+        "notification_settings"
+      ],
+      "type": "insert"
+    },
+    {
+      "calls_internal": false,
+      "operation": "insert_notification_settings_one",
+      "tables": [
+        "notification_settings"
+      ],
+      "type": "insert"
+    },
+    {
+      "calls_internal": true,
+      "operation": "insert_prompt",
+      "tables": [
+        "prompts"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "insert_prompt_answer",
+      "tables": [
+        "prompt_answers"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "insert_publisher",
+      "tables": [
+        "publishers"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "insert_reading_journal",
+      "tables": [
+        "reading_journals"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "insert_serie",
+      "tables": [
+        "series"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": false,
+      "operation": "insert_user_blocks",
+      "tables": [
+        "user_blocks"
+      ],
+      "type": "insert"
+    },
+    {
+      "calls_internal": false,
+      "operation": "insert_user_blocks_one",
+      "tables": [
+        "user_blocks"
+      ],
+      "type": "insert"
+    },
+    {
+      "calls_internal": true,
+      "operation": "insert_user_book",
+      "tables": [
+        "user_books"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "insert_user_book_read",
+      "tables": [
+        "user_book_reads"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "insert_vibe",
+      "tables": [
+        "vibes"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": false,
+      "operation": "languages",
+      "tables": [
+        "languages"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "languages_by_pk",
+      "tables": [
+        "languages"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "likes",
+      "tables": [
+        "likes"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "likes_by_pk",
+      "tables": [
+        "likes"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "links",
+      "tables": [
+        "links"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "links_by_pk",
+      "tables": [
+        "links"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "list_books",
+      "tables": [
+        "list_books"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "list_books_aggregate",
+      "tables": [
+        "list_books"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "list_books_by_pk",
+      "tables": [
+        "list_books"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "list_members",
+      "tables": [
+        "list_members"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "list_members_by_pk",
+      "tables": [
+        "list_members"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "lists",
+      "tables": [
+        "lists"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "lists_aggregate",
+      "tables": [
+        "lists"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "lists_by_pk",
+      "tables": [
+        "lists"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "me",
+      "tables": [],
+      "type": "read"
+    },
+    {
+      "calls_internal": true,
+      "operation": "newsletter",
+      "tables": [
+        "users"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "notification_channels",
+      "tables": [
+        "notification_channels"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "notification_channels_by_pk",
+      "tables": [
+        "notification_channels"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "notification_deliveries",
+      "tables": [
+        "notification_deliveries"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "notification_deliveries_aggregate",
+      "tables": [
+        "notification_deliveries"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "notification_deliveries_by_pk",
+      "tables": [
+        "notification_deliveries"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "notification_settings",
+      "tables": [
+        "notification_settings"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "notification_settings_by_pk",
+      "tables": [
+        "notification_settings"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "notification_types",
+      "tables": [
+        "notification_types"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "notification_types_by_pk",
+      "tables": [
+        "notification_types"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "notifications",
+      "tables": [
+        "notifications"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "notifications_by_pk",
+      "tables": [
+        "notifications"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "platforms",
+      "tables": [
+        "platforms"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "platforms_by_pk",
+      "tables": [
+        "platforms"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "privacy_settings",
+      "tables": [
+        "privacy_settings"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "privacy_settings_by_pk",
+      "tables": [
+        "privacy_settings"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "prompt_answers",
+      "tables": [
+        "prompt_answers"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "prompt_answers_aggregate",
+      "tables": [
+        "prompt_answers"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "prompt_answers_by_pk",
+      "tables": [
+        "prompt_answers"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "prompt_books_summary",
+      "tables": [
+        "prompt_books_summary"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "prompts",
+      "tables": [
+        "prompts"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "prompts_by_pk",
+      "tables": [
+        "prompts"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "publishers",
+      "tables": [
+        "publishers"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "publishers_by_pk",
+      "tables": [
+        "publishers"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "reading_formats",
+      "tables": [
+        "reading_formats"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "reading_formats_by_pk",
+      "tables": [
+        "reading_formats"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "reading_journals",
+      "tables": [
+        "reading_journals"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "reading_journals_by_pk",
+      "tables": [
+        "reading_journals"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "reading_journals_summary",
+      "tables": [
+        "reading_journals_summary"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": true,
+      "operation": "referrals_for_user",
+      "tables": [
+        "users"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": true,
+      "operation": "search",
+      "tables": [],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "series",
+      "tables": [
+        "series"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "series_by_pk",
+      "tables": [
+        "series"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": true,
+      "operation": "subscriptions",
+      "tables": [
+        "users"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "tag_categories",
+      "tables": [
+        "tag_categories"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "tag_categories_by_pk",
+      "tables": [
+        "tag_categories"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "taggable_counts",
+      "tables": [
+        "taggable_counts"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "taggable_counts_by_pk",
+      "tables": [
+        "taggable_counts"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "taggings",
+      "tables": [
+        "taggings"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "taggings_aggregate",
+      "tables": [
+        "taggings"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "taggings_by_pk",
+      "tables": [
+        "taggings"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "tags",
+      "tables": [
+        "tags"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "tags_aggregate",
+      "tables": [
+        "tags"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "tags_by_pk",
+      "tables": [
+        "tags"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": true,
+      "operation": "update_author",
+      "tables": [
+        "authors"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "update_book",
+      "tables": [
+        "books"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "update_character",
+      "tables": [
+        "characters"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": false,
+      "operation": "update_collection_import_results",
+      "tables": [
+        "collection_import_results"
+      ],
+      "type": "update"
+    },
+    {
+      "calls_internal": false,
+      "operation": "update_collection_import_results_many",
+      "tables": [
+        "collection_import_results"
+      ],
+      "type": "update"
+    },
+    {
+      "calls_internal": true,
+      "operation": "update_edition",
+      "tables": [
+        "editions"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "update_filter_list",
+      "tables": [
+        "filter_lists"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "update_goal",
+      "tables": [
+        "goals"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "update_goal_progress",
+      "tables": [
+        "goals"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "update_list",
+      "tables": [
+        "lists"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": false,
+      "operation": "update_list_books",
+      "tables": [
+        "list_books"
+      ],
+      "type": "update"
+    },
+    {
+      "calls_internal": false,
+      "operation": "update_list_books_by_pk",
+      "tables": [
+        "list_books"
+      ],
+      "type": "update"
+    },
+    {
+      "calls_internal": false,
+      "operation": "update_list_books_many",
+      "tables": [
+        "list_books"
+      ],
+      "type": "update"
+    },
+    {
+      "calls_internal": true,
+      "operation": "update_list_member",
+      "tables": [
+        "list_members"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": false,
+      "operation": "update_notification_deliveries",
+      "tables": [
+        "notification_deliveries"
+      ],
+      "type": "update"
+    },
+    {
+      "calls_internal": false,
+      "operation": "update_notification_deliveries_many",
+      "tables": [
+        "notification_deliveries"
+      ],
+      "type": "update"
+    },
+    {
+      "calls_internal": false,
+      "operation": "update_notification_settings",
+      "tables": [
+        "notification_settings"
+      ],
+      "type": "update"
+    },
+    {
+      "calls_internal": false,
+      "operation": "update_notification_settings_many",
+      "tables": [
+        "notification_settings"
+      ],
+      "type": "update"
+    },
+    {
+      "calls_internal": true,
+      "operation": "update_prompt",
+      "tables": [
+        "prompts"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": false,
+      "operation": "update_prompt_answers",
+      "tables": [
+        "prompt_answers"
+      ],
+      "type": "update"
+    },
+    {
+      "calls_internal": false,
+      "operation": "update_prompt_answers_by_pk",
+      "tables": [
+        "prompt_answers"
+      ],
+      "type": "update"
+    },
+    {
+      "calls_internal": false,
+      "operation": "update_prompt_answers_many",
+      "tables": [
+        "prompt_answers"
+      ],
+      "type": "update"
+    },
+    {
+      "calls_internal": true,
+      "operation": "update_publisher",
+      "tables": [
+        "publishers"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "update_reading_journal",
+      "tables": [
+        "reading_journals"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "update_serie",
+      "tables": [
+        "series"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "update_series",
+      "tables": [
+        "series"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "update_user_book",
+      "tables": [
+        "user_books"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "update_user_book_read",
+      "tables": [
+        "user_book_reads"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "update_vibe",
+      "tables": [
+        "vibes"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "upsert_book",
+      "tables": [
+        "books"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "upsert_filter_list_subscription",
+      "tables": [
+        "filter_list_subscriptions"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "upsert_followed_list",
+      "tables": [
+        "lists"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "upsert_followed_prompt",
+      "tables": [
+        "prompts"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "upsert_like",
+      "tables": [
+        "likes"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "upsert_tags",
+      "tables": [
+        "tags"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": true,
+      "operation": "upsert_user_book_reads",
+      "tables": [
+        "user_book_reads"
+      ],
+      "type": "write"
+    },
+    {
+      "calls_internal": false,
+      "operation": "user_blocks",
+      "tables": [
+        "user_blocks"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "user_blocks_by_pk",
+      "tables": [
+        "user_blocks"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "user_book_reads",
+      "tables": [
+        "user_book_reads"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "user_book_reads_aggregate",
+      "tables": [
+        "user_book_reads"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "user_book_reads_by_pk",
+      "tables": [
+        "user_book_reads"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "user_book_statuses",
+      "tables": [
+        "user_book_statuses"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "user_book_statuses_aggregate",
+      "tables": [
+        "user_book_statuses"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "user_book_statuses_by_pk",
+      "tables": [
+        "user_book_statuses"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "user_books",
+      "tables": [
+        "user_books"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "user_books_aggregate",
+      "tables": [
+        "user_books"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "user_books_by_pk",
+      "tables": [
+        "user_books"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "user_flags",
+      "tables": [
+        "user_flags"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "user_flags_by_pk",
+      "tables": [
+        "user_flags"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "user_referrals",
+      "tables": [
+        "user_referrals"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "user_referrals_by_pk",
+      "tables": [
+        "user_referrals"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "user_settings",
+      "tables": [
+        "user_settings"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "user_settings_by_pk",
+      "tables": [
+        "user_settings"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "user_statuses",
+      "tables": [
+        "user_statuses"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "user_statuses_by_pk",
+      "tables": [
+        "user_statuses"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "users",
+      "tables": [
+        "users"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "users_aggregate_by_created_at_date",
+      "tables": [
+        "users_aggregate_by_created_at_date"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "users_by_pk",
+      "tables": [
+        "users"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "vibes",
+      "tables": [
+        "vibes"
+      ],
+      "type": "read"
+    },
+    {
+      "calls_internal": false,
+      "operation": "vibes_by_pk",
+      "tables": [
+        "vibes"
+      ],
+      "type": "read"
+    }
+  ],
+  "scopes": [
+    {
+      "action": null,
+      "arguments": [
+        "review",
+        "review_has_spoilers",
+        "review_markdown",
+        "review_raw",
+        "review_slate",
+        "reviewed_at",
+        "sponsored_review"
+      ],
+      "columns": [
+        "email",
+        "librarian_roles",
+        "user_setting"
+      ],
+      "description": "Full access to all scopes",
+      "implies": [
+        "email",
+        "offline_access",
+        "openid",
+        "profile",
+        "read:account",
+        "read:catalog",
+        "read:catalog:data",
+        "read:catalog:search",
+        "read:goals",
+        "read:goals:following",
+        "read:goals:private",
+        "read:goals:public",
+        "read:journal",
+        "read:journal:following",
+        "read:journal:private",
+        "read:journal:public",
+        "read:library",
+        "read:library:following",
+        "read:library:private",
+        "read:library:public",
+        "read:lists",
+        "read:lists:following",
+        "read:lists:private",
+        "read:lists:public",
+        "read:me",
+        "read:me:content",
+        "read:me:email",
+        "read:me:roles",
+        "read:notifications",
+        "read:prompts",
+        "read:prompts:following",
+        "read:prompts:private",
+        "read:prompts:public",
+        "read:settings",
+        "read:social",
+        "read:users",
+        "read:vibes",
+        "read:vibes:following",
+        "read:vibes:private",
+        "read:vibes:public",
+        "write:catalog",
+        "write:catalog:append",
+        "write:catalog:edit",
+        "write:catalog:map",
+        "write:catalog:split",
+        "write:goals",
+        "write:library",
+        "write:lists",
+        "write:notifications",
+        "write:prompts",
+        "write:reviews",
+        "write:social",
+        "write:vibes"
+      ],
+      "operations": [
+        "activities",
+        "activities_by_pk",
+        "add_to_default_filter_list",
+        "authors",
+        "authors_by_pk",
+        "book_categories",
+        "book_categories_by_pk",
+        "book_characters",
+        "book_characters_by_pk",
+        "book_collections",
+        "book_collections_by_pk",
+        "book_import_statuses",
+        "book_mapping_normalize",
+        "book_mappings",
+        "book_mappings_by_pk",
+        "book_normalize",
+        "book_series",
+        "book_series_aggregate",
+        "book_series_by_pk",
+        "book_statuses",
+        "book_statuses_by_pk",
+        "bookles",
+        "bookles_by_pk",
+        "books",
+        "books_aggregate",
+        "books_by_pk",
+        "books_trending",
+        "characters",
+        "characters_by_pk",
+        "collection_import_result_create_book",
+        "collection_import_result_match",
+        "collection_import_result_reimport",
+        "collection_import_results",
+        "collection_import_results_by_pk",
+        "collection_import_retry",
+        "collection_imports",
+        "collection_imports_by_pk",
+        "contributions",
+        "contributions_aggregate",
+        "contributions_by_pk",
+        "contributor_role_categories",
+        "contributor_role_categories_by_pk",
+        "contributor_role_specializations",
+        "contributor_role_specializations_by_pk",
+        "contributor_roles",
+        "contributor_roles_by_pk",
+        "contributor_specializations",
+        "contributor_specializations_by_pk",
+        "countries",
+        "countries_by_pk",
+        "delete_activities",
+        "delete_activities_by_pk",
+        "delete_book_mapping",
+        "delete_filter_list",
+        "delete_filter_list_entity",
+        "delete_filter_list_subscription",
+        "delete_follow",
+        "delete_followed_list",
+        "delete_followed_prompt",
+        "delete_followed_user",
+        "delete_followed_users",
+        "delete_followed_users_by_pk",
+        "delete_goal",
+        "delete_like",
+        "delete_list",
+        "delete_list_book",
+        "delete_list_member",
+        "delete_prompt",
+        "delete_prompt_answer",
+        "delete_reading_journal",
+        "delete_reading_journals_for_book",
+        "delete_user_blocks",
+        "delete_user_blocks_by_pk",
+        "delete_user_book",
+        "delete_user_book_read",
+        "delete_vibe",
+        "edition_normalize",
+        "edition_owned",
+        "editions",
+        "editions_by_pk",
+        "ensure_system_vibes",
+        "filter_list_entities",
+        "filter_list_entities_aggregate",
+        "filter_list_entities_by_pk",
+        "filter_list_subscriptions",
+        "filter_list_subscriptions_aggregate",
+        "filter_list_subscriptions_by_pk",
+        "filter_lists",
+        "filter_lists_aggregate",
+        "filter_lists_by_pk",
+        "flag_statuses",
+        "flag_statuses_by_pk",
+        "followed_lists",
+        "followed_lists_by_pk",
+        "followed_prompts",
+        "followed_prompts_by_pk",
+        "followed_user_books",
+        "followed_user_books_aggregate",
+        "followed_users",
+        "followed_users_by_pk",
+        "following_user_books",
+        "following_user_books_aggregate",
+        "follows",
+        "follows_aggregate",
+        "follows_by_pk",
+        "goals",
+        "goals_by_pk",
+        "images",
+        "images_by_pk",
+        "insert_author",
+        "insert_block",
+        "insert_book",
+        "insert_book_mapping",
+        "insert_character",
+        "insert_collection_import",
+        "insert_edition",
+        "insert_filter_list",
+        "insert_filter_list_entity",
+        "insert_follow",
+        "insert_followed_user",
+        "insert_goal",
+        "insert_image",
+        "insert_list",
+        "insert_list_book",
+        "insert_list_member",
+        "insert_notification_settings",
+        "insert_notification_settings_one",
+        "insert_prompt",
+        "insert_prompt_answer",
+        "insert_publisher",
+        "insert_reading_journal",
+        "insert_serie",
+        "insert_user_blocks",
+        "insert_user_blocks_one",
+        "insert_user_book",
+        "insert_user_book_read",
+        "insert_vibe",
+        "languages",
+        "languages_by_pk",
+        "likes",
+        "likes_by_pk",
+        "links",
+        "links_by_pk",
+        "list_books",
+        "list_books_aggregate",
+        "list_books_by_pk",
+        "list_members",
+        "list_members_by_pk",
+        "lists",
+        "lists_aggregate",
+        "lists_by_pk",
+        "me",
+        "newsletter",
+        "notification_channels",
+        "notification_channels_by_pk",
+        "notification_deliveries",
+        "notification_deliveries_aggregate",
+        "notification_deliveries_by_pk",
+        "notification_settings",
+        "notification_settings_by_pk",
+        "notification_types",
+        "notification_types_by_pk",
+        "notifications",
+        "notifications_by_pk",
+        "platforms",
+        "platforms_by_pk",
+        "privacy_settings",
+        "privacy_settings_by_pk",
+        "prompt_answers",
+        "prompt_answers_aggregate",
+        "prompt_answers_by_pk",
+        "prompt_books_summary",
+        "prompts",
+        "prompts_by_pk",
+        "publishers",
+        "publishers_by_pk",
+        "reading_formats",
+        "reading_formats_by_pk",
+        "reading_journals",
+        "reading_journals_by_pk",
+        "reading_journals_summary",
+        "referrals_for_user",
+        "search",
+        "series",
+        "series_by_pk",
+        "subscriptions",
+        "tag_categories",
+        "tag_categories_by_pk",
+        "taggable_counts",
+        "taggable_counts_by_pk",
+        "taggings",
+        "taggings_aggregate",
+        "taggings_by_pk",
+        "tags",
+        "tags_aggregate",
+        "tags_by_pk",
+        "update_author",
+        "update_book",
+        "update_character",
+        "update_collection_import_results",
+        "update_collection_import_results_many",
+        "update_edition",
+        "update_filter_list",
+        "update_goal",
+        "update_goal_progress",
+        "update_list",
+        "update_list_books",
+        "update_list_books_by_pk",
+        "update_list_books_many",
+        "update_list_member",
+        "update_notification_deliveries",
+        "update_notification_deliveries_many",
+        "update_notification_settings",
+        "update_notification_settings_many",
+        "update_prompt",
+        "update_prompt_answers",
+        "update_prompt_answers_by_pk",
+        "update_prompt_answers_many",
+        "update_publisher",
+        "update_reading_journal",
+        "update_serie",
+        "update_series",
+        "update_user_book",
+        "update_user_book_read",
+        "update_vibe",
+        "upsert_book",
+        "upsert_filter_list_subscription",
+        "upsert_followed_list",
+        "upsert_followed_prompt",
+        "upsert_like",
+        "upsert_tags",
+        "upsert_user_book_reads",
+        "user_blocks",
+        "user_blocks_by_pk",
+        "user_book_reads",
+        "user_book_reads_aggregate",
+        "user_book_reads_by_pk",
+        "user_book_statuses",
+        "user_book_statuses_aggregate",
+        "user_book_statuses_by_pk",
+        "user_books",
+        "user_books_aggregate",
+        "user_books_by_pk",
+        "user_flags",
+        "user_flags_by_pk",
+        "user_referrals",
+        "user_referrals_by_pk",
+        "user_settings",
+        "user_settings_by_pk",
+        "user_statuses",
+        "user_statuses_by_pk",
+        "users",
+        "users_aggregate_by_created_at_date",
+        "users_by_pk",
+        "vibes",
+        "vibes_by_pk"
+      ],
+      "scope": "all",
+      "warning": "Full access to your account, including your email address and any scopes added in the future."
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Public catalog data and search",
+      "implies": [
+        "read:catalog:data",
+        "read:catalog:search"
+      ],
+      "operations": [
+        "authors",
+        "authors_by_pk",
+        "book_categories",
+        "book_categories_by_pk",
+        "book_characters",
+        "book_characters_by_pk",
+        "book_collections",
+        "book_collections_by_pk",
+        "book_mappings",
+        "book_mappings_by_pk",
+        "book_series",
+        "book_series_aggregate",
+        "book_series_by_pk",
+        "book_statuses",
+        "book_statuses_by_pk",
+        "bookles",
+        "bookles_by_pk",
+        "books",
+        "books_aggregate",
+        "books_by_pk",
+        "books_trending",
+        "characters",
+        "characters_by_pk",
+        "contributions",
+        "contributions_aggregate",
+        "contributions_by_pk",
+        "contributor_role_categories",
+        "contributor_role_categories_by_pk",
+        "contributor_role_specializations",
+        "contributor_role_specializations_by_pk",
+        "contributor_roles",
+        "contributor_roles_by_pk",
+        "contributor_specializations",
+        "contributor_specializations_by_pk",
+        "countries",
+        "countries_by_pk",
+        "editions",
+        "editions_by_pk",
+        "flag_statuses",
+        "flag_statuses_by_pk",
+        "images",
+        "images_by_pk",
+        "languages",
+        "languages_by_pk",
+        "links",
+        "links_by_pk",
+        "platforms",
+        "platforms_by_pk",
+        "privacy_settings",
+        "privacy_settings_by_pk",
+        "publishers",
+        "publishers_by_pk",
+        "reading_formats",
+        "reading_formats_by_pk",
+        "search",
+        "series",
+        "series_by_pk",
+        "tag_categories",
+        "tag_categories_by_pk",
+        "taggable_counts",
+        "taggable_counts_by_pk",
+        "taggings",
+        "taggings_aggregate",
+        "taggings_by_pk",
+        "tags",
+        "tags_aggregate",
+        "tags_by_pk",
+        "user_book_statuses",
+        "user_book_statuses_aggregate",
+        "user_book_statuses_by_pk",
+        "user_statuses",
+        "user_statuses_by_pk"
+      ],
+      "scope": "read:catalog"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Direct catalog lookups: books, editions, authors, series, characters, publishers",
+      "implies": [],
+      "operations": [
+        "authors",
+        "authors_by_pk",
+        "book_categories",
+        "book_categories_by_pk",
+        "book_characters",
+        "book_characters_by_pk",
+        "book_collections",
+        "book_collections_by_pk",
+        "book_mappings",
+        "book_mappings_by_pk",
+        "book_series",
+        "book_series_aggregate",
+        "book_series_by_pk",
+        "book_statuses",
+        "book_statuses_by_pk",
+        "bookles",
+        "bookles_by_pk",
+        "books",
+        "books_aggregate",
+        "books_by_pk",
+        "books_trending",
+        "characters",
+        "characters_by_pk",
+        "contributions",
+        "contributions_aggregate",
+        "contributions_by_pk",
+        "contributor_role_categories",
+        "contributor_role_categories_by_pk",
+        "contributor_role_specializations",
+        "contributor_role_specializations_by_pk",
+        "contributor_roles",
+        "contributor_roles_by_pk",
+        "contributor_specializations",
+        "contributor_specializations_by_pk",
+        "countries",
+        "countries_by_pk",
+        "editions",
+        "editions_by_pk",
+        "flag_statuses",
+        "flag_statuses_by_pk",
+        "images",
+        "images_by_pk",
+        "languages",
+        "languages_by_pk",
+        "links",
+        "links_by_pk",
+        "platforms",
+        "platforms_by_pk",
+        "privacy_settings",
+        "privacy_settings_by_pk",
+        "publishers",
+        "publishers_by_pk",
+        "reading_formats",
+        "reading_formats_by_pk",
+        "series",
+        "series_by_pk",
+        "tag_categories",
+        "tag_categories_by_pk",
+        "taggable_counts",
+        "taggable_counts_by_pk",
+        "taggings",
+        "taggings_aggregate",
+        "taggings_by_pk",
+        "tags",
+        "tags_aggregate",
+        "tags_by_pk",
+        "user_book_statuses",
+        "user_book_statuses_aggregate",
+        "user_book_statuses_by_pk",
+        "user_statuses",
+        "user_statuses_by_pk"
+      ],
+      "scope": "read:catalog:data"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Search across catalog data",
+      "implies": [],
+      "operations": [
+        "authors",
+        "authors_by_pk",
+        "book_categories",
+        "book_categories_by_pk",
+        "book_characters",
+        "book_characters_by_pk",
+        "book_collections",
+        "book_collections_by_pk",
+        "book_mappings",
+        "book_mappings_by_pk",
+        "book_series",
+        "book_series_aggregate",
+        "book_series_by_pk",
+        "book_statuses",
+        "book_statuses_by_pk",
+        "bookles",
+        "bookles_by_pk",
+        "books",
+        "books_aggregate",
+        "books_by_pk",
+        "books_trending",
+        "characters",
+        "characters_by_pk",
+        "contributions",
+        "contributions_aggregate",
+        "contributions_by_pk",
+        "contributor_role_categories",
+        "contributor_role_categories_by_pk",
+        "contributor_role_specializations",
+        "contributor_role_specializations_by_pk",
+        "contributor_roles",
+        "contributor_roles_by_pk",
+        "contributor_specializations",
+        "contributor_specializations_by_pk",
+        "countries",
+        "countries_by_pk",
+        "editions",
+        "editions_by_pk",
+        "flag_statuses",
+        "flag_statuses_by_pk",
+        "images",
+        "images_by_pk",
+        "languages",
+        "languages_by_pk",
+        "links",
+        "links_by_pk",
+        "platforms",
+        "platforms_by_pk",
+        "privacy_settings",
+        "privacy_settings_by_pk",
+        "publishers",
+        "publishers_by_pk",
+        "reading_formats",
+        "reading_formats_by_pk",
+        "search",
+        "series",
+        "series_by_pk",
+        "tag_categories",
+        "tag_categories_by_pk",
+        "taggable_counts",
+        "taggable_counts_by_pk",
+        "taggings",
+        "taggings_aggregate",
+        "taggings_by_pk",
+        "tags",
+        "tags_aggregate",
+        "tags_by_pk",
+        "user_book_statuses",
+        "user_book_statuses_aggregate",
+        "user_book_statuses_by_pk",
+        "user_statuses",
+        "user_statuses_by_pk"
+      ],
+      "scope": "read:catalog:search"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Your library and reading progress (public + following + private)",
+      "implies": [
+        "read:library:following",
+        "read:library:private",
+        "read:library:public"
+      ],
+      "operations": [
+        "user_book_reads",
+        "user_book_reads_aggregate",
+        "user_book_reads_by_pk",
+        "user_books",
+        "user_books_aggregate",
+        "user_books_by_pk"
+      ],
+      "scope": "read:library"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Your public library entries",
+      "implies": [],
+      "operations": [
+        "user_book_reads",
+        "user_book_reads_aggregate",
+        "user_book_reads_by_pk",
+        "user_books",
+        "user_books_aggregate",
+        "user_books_by_pk"
+      ],
+      "scope": "read:library:public"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Your followers-only library entries",
+      "implies": [],
+      "operations": [
+        "user_book_reads",
+        "user_book_reads_aggregate",
+        "user_book_reads_by_pk",
+        "user_books",
+        "user_books_aggregate",
+        "user_books_by_pk"
+      ],
+      "scope": "read:library:following"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Your private library entries",
+      "implies": [],
+      "operations": [
+        "user_book_reads",
+        "user_book_reads_aggregate",
+        "user_book_reads_by_pk",
+        "user_books",
+        "user_books_aggregate",
+        "user_books_by_pk"
+      ],
+      "scope": "read:library:private"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Your reading journal (public + following + private)",
+      "implies": [
+        "read:journal:following",
+        "read:journal:private",
+        "read:journal:public"
+      ],
+      "operations": [
+        "reading_journals",
+        "reading_journals_by_pk",
+        "reading_journals_summary"
+      ],
+      "scope": "read:journal"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Your public journal entries",
+      "implies": [],
+      "operations": [
+        "reading_journals",
+        "reading_journals_by_pk",
+        "reading_journals_summary"
+      ],
+      "scope": "read:journal:public"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Your followers-only journal entries",
+      "implies": [],
+      "operations": [
+        "reading_journals",
+        "reading_journals_by_pk",
+        "reading_journals_summary"
+      ],
+      "scope": "read:journal:following"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Your private journal entries",
+      "implies": [],
+      "operations": [
+        "reading_journals",
+        "reading_journals_by_pk",
+        "reading_journals_summary"
+      ],
+      "scope": "read:journal:private"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Lists (public + following + private)",
+      "implies": [
+        "read:lists:following",
+        "read:lists:private",
+        "read:lists:public"
+      ],
+      "operations": [
+        "filter_list_entities",
+        "filter_list_entities_aggregate",
+        "filter_list_entities_by_pk",
+        "filter_list_subscriptions",
+        "filter_list_subscriptions_aggregate",
+        "filter_list_subscriptions_by_pk",
+        "filter_lists",
+        "filter_lists_aggregate",
+        "filter_lists_by_pk",
+        "followed_lists",
+        "followed_lists_by_pk",
+        "list_books",
+        "list_books_aggregate",
+        "list_books_by_pk",
+        "list_members",
+        "list_members_by_pk",
+        "lists",
+        "lists_aggregate",
+        "lists_by_pk"
+      ],
+      "scope": "read:lists"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Your public lists",
+      "implies": [],
+      "operations": [
+        "filter_list_entities",
+        "filter_list_entities_aggregate",
+        "filter_list_entities_by_pk",
+        "filter_list_subscriptions",
+        "filter_list_subscriptions_aggregate",
+        "filter_list_subscriptions_by_pk",
+        "filter_lists",
+        "filter_lists_aggregate",
+        "filter_lists_by_pk",
+        "followed_lists",
+        "followed_lists_by_pk",
+        "list_books",
+        "list_books_aggregate",
+        "list_books_by_pk",
+        "list_members",
+        "list_members_by_pk",
+        "lists",
+        "lists_aggregate",
+        "lists_by_pk"
+      ],
+      "scope": "read:lists:public"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Your followers-only lists",
+      "implies": [],
+      "operations": [
+        "filter_list_entities",
+        "filter_list_entities_aggregate",
+        "filter_list_entities_by_pk",
+        "filter_list_subscriptions",
+        "filter_list_subscriptions_aggregate",
+        "filter_list_subscriptions_by_pk",
+        "filter_lists",
+        "filter_lists_aggregate",
+        "filter_lists_by_pk",
+        "followed_lists",
+        "followed_lists_by_pk",
+        "list_books",
+        "list_books_aggregate",
+        "list_books_by_pk",
+        "list_members",
+        "list_members_by_pk",
+        "lists",
+        "lists_aggregate",
+        "lists_by_pk"
+      ],
+      "scope": "read:lists:following"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Your private lists",
+      "implies": [],
+      "operations": [
+        "filter_list_entities",
+        "filter_list_entities_aggregate",
+        "filter_list_entities_by_pk",
+        "filter_list_subscriptions",
+        "filter_list_subscriptions_aggregate",
+        "filter_list_subscriptions_by_pk",
+        "filter_lists",
+        "filter_lists_aggregate",
+        "filter_lists_by_pk",
+        "followed_lists",
+        "followed_lists_by_pk",
+        "list_books",
+        "list_books_aggregate",
+        "list_books_by_pk",
+        "list_members",
+        "list_members_by_pk",
+        "lists",
+        "lists_aggregate",
+        "lists_by_pk"
+      ],
+      "scope": "read:lists:private"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Reading goals (public + following + private)",
+      "implies": [
+        "read:goals:following",
+        "read:goals:private",
+        "read:goals:public"
+      ],
+      "operations": [
+        "goals",
+        "goals_by_pk"
+      ],
+      "scope": "read:goals"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Your public goals",
+      "implies": [],
+      "operations": [
+        "goals",
+        "goals_by_pk"
+      ],
+      "scope": "read:goals:public"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Your followers-only goals",
+      "implies": [],
+      "operations": [
+        "goals",
+        "goals_by_pk"
+      ],
+      "scope": "read:goals:following"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Your private goals",
+      "implies": [],
+      "operations": [
+        "goals",
+        "goals_by_pk"
+      ],
+      "scope": "read:goals:private"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [
+        "email",
+        "librarian_roles"
+      ],
+      "description": "Your profile",
+      "implies": [
+        "read:me:content",
+        "read:me:email",
+        "read:me:roles"
+      ],
+      "operations": [
+        "me"
+      ],
+      "scope": "read:me"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Your public profile (id, username, name, avatar)",
+      "implies": [],
+      "operations": [
+        "me"
+      ],
+      "scope": "read:me:content"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [
+        "email"
+      ],
+      "description": "Your email address",
+      "implies": [
+        "read:me:content"
+      ],
+      "operations": [
+        "me"
+      ],
+      "scope": "read:me:email",
+      "warning": true
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [
+        "librarian_roles"
+      ],
+      "description": "Your Hardcover roles (librarian_roles, including hardcover_admin for staff)",
+      "implies": [],
+      "operations": [
+        "me"
+      ],
+      "scope": "read:me:roles"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [
+        "user_setting"
+      ],
+      "description": "Your settings (release filters, Shelf Showdown preferences)",
+      "implies": [],
+      "operations": [
+        "user_settings",
+        "user_settings_by_pk"
+      ],
+      "scope": "read:settings"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Other users' public profiles",
+      "implies": [],
+      "operations": [
+        "users",
+        "users_aggregate_by_created_at_date",
+        "users_by_pk"
+      ],
+      "scope": "read:users"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Your notifications",
+      "implies": [],
+      "operations": [
+        "notification_channels",
+        "notification_channels_by_pk",
+        "notification_deliveries",
+        "notification_deliveries_aggregate",
+        "notification_deliveries_by_pk",
+        "notification_settings",
+        "notification_settings_by_pk",
+        "notification_types",
+        "notification_types_by_pk",
+        "notifications",
+        "notifications_by_pk"
+      ],
+      "scope": "read:notifications"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Prompt answers (public + following + private)",
+      "implies": [
+        "read:prompts:following",
+        "read:prompts:private",
+        "read:prompts:public"
+      ],
+      "operations": [
+        "followed_prompts",
+        "followed_prompts_by_pk",
+        "prompt_answers",
+        "prompt_answers_aggregate",
+        "prompt_answers_by_pk",
+        "prompt_books_summary",
+        "prompts",
+        "prompts_by_pk"
+      ],
+      "scope": "read:prompts"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Your public prompt answers",
+      "implies": [],
+      "operations": [
+        "followed_prompts",
+        "followed_prompts_by_pk",
+        "prompt_answers",
+        "prompt_answers_aggregate",
+        "prompt_answers_by_pk",
+        "prompt_books_summary",
+        "prompts",
+        "prompts_by_pk"
+      ],
+      "scope": "read:prompts:public"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Your followers-only prompt answers",
+      "implies": [],
+      "operations": [
+        "followed_prompts",
+        "followed_prompts_by_pk",
+        "prompt_answers",
+        "prompt_answers_aggregate",
+        "prompt_answers_by_pk",
+        "prompt_books_summary",
+        "prompts",
+        "prompts_by_pk"
+      ],
+      "scope": "read:prompts:following"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Your private prompt answers",
+      "implies": [],
+      "operations": [
+        "followed_prompts",
+        "followed_prompts_by_pk",
+        "prompt_answers",
+        "prompt_answers_aggregate",
+        "prompt_answers_by_pk",
+        "prompt_books_summary",
+        "prompts",
+        "prompts_by_pk"
+      ],
+      "scope": "read:prompts:private"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Read other users generated content (reading status, reviews, etc.)",
+      "implies": [],
+      "operations": [
+        "activities",
+        "activities_by_pk",
+        "followed_user_books",
+        "followed_user_books_aggregate",
+        "followed_users",
+        "followed_users_by_pk",
+        "following_user_books",
+        "following_user_books_aggregate",
+        "follows",
+        "follows_aggregate",
+        "follows_by_pk",
+        "likes",
+        "likes_by_pk",
+        "user_blocks",
+        "user_blocks_by_pk"
+      ],
+      "scope": "read:social"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Your vibes (public, followers-only, and private)",
+      "implies": [
+        "read:vibes:following",
+        "read:vibes:private",
+        "read:vibes:public"
+      ],
+      "operations": [
+        "vibes",
+        "vibes_by_pk"
+      ],
+      "scope": "read:vibes"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Your public vibes",
+      "implies": [],
+      "operations": [
+        "vibes",
+        "vibes_by_pk"
+      ],
+      "scope": "read:vibes:public"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Your followers-only vibes",
+      "implies": [],
+      "operations": [
+        "vibes",
+        "vibes_by_pk"
+      ],
+      "scope": "read:vibes:following"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Your private vibes",
+      "implies": [],
+      "operations": [
+        "vibes",
+        "vibes_by_pk"
+      ],
+      "scope": "read:vibes:private"
+    },
+    {
+      "action": "read",
+      "arguments": [],
+      "columns": [],
+      "description": "Your account data: imports, subscriptions, referrals, flags",
+      "implies": [],
+      "operations": [
+        "collection_import_results",
+        "collection_import_results_by_pk",
+        "collection_imports",
+        "collection_imports_by_pk",
+        "newsletter",
+        "referrals_for_user",
+        "subscriptions",
+        "user_flags",
+        "user_flags_by_pk",
+        "user_referrals",
+        "user_referrals_by_pk"
+      ],
+      "scope": "read:account"
+    },
+    {
+      "action": "write",
+      "arguments": [],
+      "columns": [],
+      "description": "Add and update books in your library (includes reading journal and imports)",
+      "implies": [],
+      "operations": [
+        "collection_import_result_create_book",
+        "collection_import_result_match",
+        "collection_import_result_reimport",
+        "collection_import_retry",
+        "delete_reading_journal",
+        "delete_reading_journals_for_book",
+        "delete_user_book",
+        "delete_user_book_read",
+        "edition_owned",
+        "insert_collection_import",
+        "insert_reading_journal",
+        "insert_user_book",
+        "insert_user_book_read",
+        "update_collection_import_results",
+        "update_collection_import_results_many",
+        "update_reading_journal",
+        "update_user_book",
+        "update_user_book_read",
+        "upsert_user_book_reads"
+      ],
+      "scope": "write:library"
+    },
+    {
+      "action": "write",
+      "arguments": [
+        "review",
+        "review_has_spoilers",
+        "review_markdown",
+        "review_raw",
+        "review_slate",
+        "reviewed_at",
+        "sponsored_review"
+      ],
+      "columns": [],
+      "description": "Write and update reviews",
+      "implies": [],
+      "operations": [],
+      "scope": "write:reviews"
+    },
+    {
+      "action": "write",
+      "arguments": [],
+      "columns": [],
+      "description": "Create and update lists (includes filter lists and followed lists)",
+      "implies": [],
+      "operations": [
+        "add_to_default_filter_list",
+        "delete_filter_list",
+        "delete_filter_list_entity",
+        "delete_filter_list_subscription",
+        "delete_followed_list",
+        "delete_list",
+        "delete_list_book",
+        "delete_list_member",
+        "insert_filter_list",
+        "insert_filter_list_entity",
+        "insert_list",
+        "insert_list_book",
+        "insert_list_member",
+        "update_filter_list",
+        "update_list",
+        "update_list_books",
+        "update_list_books_by_pk",
+        "update_list_books_many",
+        "update_list_member",
+        "upsert_filter_list_subscription",
+        "upsert_followed_list"
+      ],
+      "scope": "write:lists"
+    },
+    {
+      "action": "write",
+      "arguments": [],
+      "columns": [],
+      "description": "Create and update reading goals",
+      "implies": [],
+      "operations": [
+        "delete_goal",
+        "insert_goal",
+        "update_goal",
+        "update_goal_progress"
+      ],
+      "scope": "write:goals"
+    },
+    {
+      "action": "write",
+      "arguments": [],
+      "columns": [],
+      "description": "Create prompts and answer prompts",
+      "implies": [],
+      "operations": [
+        "delete_followed_prompt",
+        "delete_prompt",
+        "delete_prompt_answer",
+        "insert_prompt",
+        "insert_prompt_answer",
+        "update_prompt",
+        "update_prompt_answers",
+        "update_prompt_answers_by_pk",
+        "update_prompt_answers_many",
+        "upsert_followed_prompt"
+      ],
+      "scope": "write:prompts"
+    },
+    {
+      "action": "write",
+      "arguments": [],
+      "columns": [],
+      "description": "Follow users, like content, block users",
+      "implies": [],
+      "operations": [
+        "delete_activities",
+        "delete_activities_by_pk",
+        "delete_follow",
+        "delete_followed_user",
+        "delete_followed_users",
+        "delete_followed_users_by_pk",
+        "delete_like",
+        "delete_user_blocks",
+        "delete_user_blocks_by_pk",
+        "insert_block",
+        "insert_follow",
+        "insert_followed_user",
+        "insert_user_blocks",
+        "insert_user_blocks_one",
+        "upsert_like"
+      ],
+      "scope": "write:social"
+    },
+    {
+      "action": "write",
+      "arguments": [],
+      "columns": [],
+      "description": "Mark notifications read and update notification settings",
+      "implies": [],
+      "operations": [
+        "insert_notification_settings",
+        "insert_notification_settings_one",
+        "update_notification_deliveries",
+        "update_notification_deliveries_many",
+        "update_notification_settings",
+        "update_notification_settings_many"
+      ],
+      "scope": "write:notifications"
+    },
+    {
+      "action": "write",
+      "arguments": [],
+      "columns": [],
+      "description": "Create, update and delete vibes",
+      "implies": [],
+      "operations": [
+        "delete_vibe",
+        "ensure_system_vibes",
+        "insert_vibe",
+        "update_vibe"
+      ],
+      "scope": "write:vibes"
+    },
+    {
+      "action": "write",
+      "arguments": [],
+      "columns": [],
+      "description": "Edit catalog data",
+      "implies": [
+        "write:catalog:append",
+        "write:catalog:edit",
+        "write:catalog:map",
+        "write:catalog:split"
+      ],
+      "operations": [
+        "book_import_statuses",
+        "book_mapping_normalize",
+        "book_normalize",
+        "delete_book_mapping",
+        "edition_normalize",
+        "insert_author",
+        "insert_book",
+        "insert_book_mapping",
+        "insert_character",
+        "insert_edition",
+        "insert_image",
+        "insert_publisher",
+        "insert_serie",
+        "update_author",
+        "update_book",
+        "update_character",
+        "update_edition",
+        "update_publisher",
+        "update_serie",
+        "update_series",
+        "upsert_book",
+        "upsert_tags"
+      ],
+      "scope": "write:catalog"
+    },
+    {
+      "action": "write",
+      "arguments": [],
+      "columns": [],
+      "description": "Edit catalog data (requires librarian role)",
+      "implies": [
+        "write:catalog:append"
+      ],
+      "operations": [
+        "book_import_statuses",
+        "book_normalize",
+        "edition_normalize",
+        "insert_author",
+        "insert_book",
+        "insert_character",
+        "insert_edition",
+        "insert_image",
+        "insert_publisher",
+        "insert_serie",
+        "update_author",
+        "update_book",
+        "update_character",
+        "update_edition",
+        "update_publisher",
+        "update_serie",
+        "update_series",
+        "upsert_book",
+        "upsert_tags"
+      ],
+      "scope": "write:catalog:edit"
+    },
+    {
+      "action": "write",
+      "arguments": [],
+      "columns": [],
+      "description": "Fill empty fields",
+      "implies": [],
+      "operations": [
+        "book_import_statuses",
+        "insert_author",
+        "insert_book",
+        "insert_character",
+        "insert_edition",
+        "insert_image",
+        "insert_publisher",
+        "insert_serie",
+        "update_author",
+        "update_book",
+        "update_character",
+        "update_edition",
+        "update_publisher",
+        "update_serie",
+        "update_series",
+        "upsert_book",
+        "upsert_tags"
+      ],
+      "scope": "write:catalog:append"
+    },
+    {
+      "action": "write",
+      "arguments": [],
+      "columns": [],
+      "description": "Edit book mappings (requires book_mapper librarian role)",
+      "implies": [],
+      "operations": [
+        "book_mapping_normalize",
+        "delete_book_mapping",
+        "insert_book_mapping"
+      ],
+      "scope": "write:catalog:map"
+    },
+    {
+      "action": "write",
+      "arguments": [],
+      "columns": [],
+      "description": "Split books and editions (requires edition_splitter librarian role)",
+      "implies": [],
+      "operations": [],
+      "scope": "write:catalog:split"
+    },
+    {
+      "action": null,
+      "arguments": [],
+      "columns": [],
+      "description": "Confirm your identity (required for Sign in with Hardcover)",
+      "implies": [],
+      "operations": [],
+      "scope": "openid"
+    },
+    {
+      "action": null,
+      "arguments": [],
+      "columns": [],
+      "description": "Your public profile (id, username, name, avatar)",
+      "implies": [
+        "openid"
+      ],
+      "operations": [],
+      "scope": "profile"
+    },
+    {
+      "action": null,
+      "arguments": [],
+      "columns": [],
+      "description": "Your email address",
+      "implies": [
+        "openid"
+      ],
+      "operations": [],
+      "scope": "email",
+      "warning": true
+    },
+    {
+      "action": null,
+      "arguments": [],
+      "columns": [],
+      "description": "Maintain access to your account in the background when you are offline",
+      "implies": [
+        "openid"
+      ],
+      "operations": [],
+      "scope": "offline_access",
+      "warning": "Allows the app to refresh your login and access information while you are not using it."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+# cargo-deny policy, checked in CI (`cargo deny check`).
+
+[graph]
+# Only the platform the app ships on; GPUI pulls in macOS/Windows/web crates.
+targets = ["x86_64-unknown-linux-gnu", "aarch64-unknown-linux-gnu"]
+all-features = false
+
+[advisories]
+# Vulnerabilities always fail. Unmaintained crates fail only when we depend on
+# them directly; transitive ones (mostly under GPUI) are not ours to replace.
+unmaintained = "workspace"
+ignore = [
+  # chrono is unmaintained, but GPUI and gpui-component depend on it too, so
+  # dropping it here would not remove it from the build.
+  { id = "RUSTSEC-2026-0543", reason = "transitively required by GPUI" },
+]
+
+[licenses]
+confidence-threshold = 0.9
+# Permissive licences, plus MPL-2.0 (file-level copyleft; the crate is used
+# unmodified, so the app's own code stays MIT).
+allow = [
+  "0BSD",
+  "Apache-2.0",
+  "Apache-2.0 WITH LLVM-exception",
+  "BSD-2-Clause",
+  "BSD-3-Clause",
+  "BSL-1.0",
+  "CC0-1.0",
+  "CDLA-Permissive-2.0",
+  "ISC",
+  "MIT",
+  "MPL-2.0",
+  "Unicode-3.0",
+  "Unlicense",
+  "Zlib",
+]
+
+[bans]
+multiple-versions = "allow"
+wildcards = "deny"
+allow-wildcard-paths = true
+
+[sources]
+unknown-registry = "deny"
+unknown-git = "deny"
