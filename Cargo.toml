@@ -1,0 +1,14 @@
+[workspace]
+resolver = "2"
+members = ["crates/*"]
+
+[workspace.package]
+edition = "2024"
+license = "MIT"
+repository = "https://github.com/AliSayyah/hardcover-desktop"
+
+# Release artifacts. `release` stays the default for local builds.
+[profile.dist]
+inherits = "release"
+lto = "thin"
+strip = true

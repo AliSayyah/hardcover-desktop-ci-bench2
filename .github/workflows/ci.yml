@@ -1,0 +1,105 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+  schedule:
+    # Weekly, so new RustSec advisories show up even when nothing is pushed.
+    - cron: "17 4 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  CARGO_TERM_COLOR: always
+  CARGO_INCREMENTAL: "0"
+  RUSTFLAGS: -D warnings
+  # Line tables keep file:line in panics and backtraces; full debug info only
+  # slows compiling and linking and bloats the cache.
+  CARGO_PROFILE_DEV_DEBUG: line-tables-only
+
+jobs:
+  fmt:
+    name: Format
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - run: rustup toolchain install
+      - run: cargo fmt --all --check
+
+  check:
+    name: Clippy and tests
+    runs-on: ubuntu-24.04
+    # The oldest Ubuntu the release supports, so CI builds what the release builds.
+    container: ubuntu:22.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: ./.github/actions/setup-rust
+      - run: cargo clippy --workspace --all-targets --locked
+      # Live-API tests are #[ignore]d: CI has no Hardcover credentials.
+      - run: cargo test --workspace --locked
+
+  deny:
+    name: Dependencies (${{ matrix.checks }})
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        checks: [advisories, "bans licenses sources"]
+    # A new advisory against an existing dependency shouldn't block unrelated
+    # pull requests; it fails the push and weekly runs instead.
+    continue-on-error: ${{ matrix.checks == 'advisories' && github.event_name == 'pull_request' }}
+    env:
+      CARGO_DENY_VERSION: "0.21.0"
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - run: rustup toolchain install
+      - name: Install cargo-deny
+        run: |
+          name="cargo-deny-$CARGO_DENY_VERSION-x86_64-unknown-linux-musl"
+          curl --proto '=https' --tlsv1.2 -sSfL \
+            "https://github.com/EmbarkStudios/cargo-deny/releases/download/$CARGO_DENY_VERSION/$name.tar.gz" |
+            tar -xz -C "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP/$name" >>"$GITHUB_PATH"
+      - run: cargo deny --locked check ${{ matrix.checks }}
+
+  packaging:
+    name: Desktop entry and metainfo
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends desktop-file-utils appstream
+      - run: desktop-file-validate packaging/linux/*.desktop
+      - run: appstreamcli validate --no-net packaging/linux/*.metainfo.xml
+      - name: Cargo and metainfo versions agree
+        run: ci/check-version.sh
+
+  actionlint:
+    name: Workflows
+    runs-on: ubuntu-24.04
+    env:
+      ACTIONLINT_VERSION: "1.7.12"
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Run actionlint
+        run: |
+          curl --proto '=https' --tlsv1.2 -sSfL \
+            "https://github.com/rhysd/actionlint/releases/download/v$ACTIONLINT_VERSION/actionlint_${ACTIONLINT_VERSION}_linux_amd64.tar.gz" |
+            tar -xz -C "$RUNNER_TEMP" actionlint
+          "$RUNNER_TEMP/actionlint" -color
