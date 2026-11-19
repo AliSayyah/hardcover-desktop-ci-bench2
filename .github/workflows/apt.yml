@@ -11,6 +11,9 @@ jobs:
         n: [1, 2]
     runs-on: ubuntu-24.04
     container: ubuntu:22.04
+    defaults:
+      run:
+        shell: bash
     steps:
       - run: cat /etc/apt/sources.list | grep -v '^#' | grep . | head -3; cat /etc/resolv.conf
       - if: matrix.mirror != 'default'
