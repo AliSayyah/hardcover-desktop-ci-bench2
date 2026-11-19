@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Hardcover Desktop
+GenericName=Reading Tracker
+Comment=Track your reading on Hardcover
+Exec=hardcover-desktop
+Icon=io.github.alisayyah.HardcoverDesktop
+Terminal=false
+Categories=Education;Literature;
+Keywords=books;reading;library;hardcover;
+StartupWMClass=io.github.alisayyah.HardcoverDesktop

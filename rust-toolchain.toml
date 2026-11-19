@@ -1,0 +1,6 @@
+# Pinned so `clippy -D warnings` doesn't break when a new stable adds lints.
+# Bump deliberately and fix any new lints in the same commit.
+[toolchain]
+channel = "1.95"
+components = ["clippy", "rustfmt"]
+profile = "minimal"
